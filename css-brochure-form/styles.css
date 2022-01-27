@@ -1,0 +1,124 @@
+form {
+  width: 50%;
+  margin: auto;
+}
+
+h3 {
+  color: #ec5c57;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: large;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.email {
+  margin: 10px 0;
+}
+
+label.email {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 80%;
+  font-weight: bold;
+  color: #303030;
+  padding-left: 3%;
+}
+
+input.email {
+  font-family: AtlasGrotesk, sans-serif;
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #dddede;
+}
+
+div.name {
+  margin: 10px 0;
+}
+
+label.name {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+  color: #303030;
+  padding-left: 3%;
+}
+
+input.name {
+  font-family: AtlasGrotesk, sans-serif;
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #dddede;
+}
+
+div.hiring {
+  margin: 10px 0;
+}
+
+label.hiring {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+  color: #303030;
+  padding-left: 3%;
+}
+
+input.hiring {
+  font-family: AtlasGrotesk, sans-serif;
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #dddede;
+}
+
+div.engineers {
+  margin: 10px 0;
+}
+
+label.engineers {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+  color: #303030;
+  padding-left: 3%;
+}
+
+select {
+  font-family: "Brandon Grotesque", sans-serif;
+  padding: 10px;
+  width: 100%;
+  font-size: medium;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border: 1px solid #bdc0bf;
+}
+
+div.submit {
+  text-align: right;
+  height: 40px;
+  margin: 10px;
+}
+
+button.submit {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: bold;
+  background-color: #ec5c57;
+  color: white;
+  border: none;
+  border-color: #ec5c57;
+  border-radius: 15px;
+  padding: 8px 22px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border-color: darkgray;
+}
