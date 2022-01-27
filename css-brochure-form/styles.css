@@ -26,7 +26,6 @@ label.email {
 
 input.email {
   font-family: AtlasGrotesk, sans-serif;
-  padding: 10px;
   width: 100%;
   margin: 5px;
   height: 40px;
@@ -48,7 +47,6 @@ label.name {
 
 input.name {
   font-family: AtlasGrotesk, sans-serif;
-  padding: 10px;
   width: 100%;
   margin: 5px;
   height: 40px;
@@ -70,12 +68,15 @@ label.hiring {
 
 input.hiring {
   font-family: AtlasGrotesk, sans-serif;
-  padding: 10px;
   width: 100%;
   margin: 5px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #dddede;
+}
+
+::placeholder {
+  padding: 10px;
 }
 
 div.engineers {
