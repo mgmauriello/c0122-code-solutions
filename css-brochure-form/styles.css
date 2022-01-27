@@ -93,6 +93,7 @@ label.engineers {
 select {
   font-family: "Brandon Grotesque", sans-serif;
   padding: 10px;
+  margin: 5px;
   width: 100%;
   font-size: medium;
   background-color: #f3f3f3;
@@ -103,7 +104,7 @@ select {
 div.submit {
   text-align: right;
   height: 40px;
-  margin: 10px;
+  margin: -6px;
 }
 
 button.submit {
