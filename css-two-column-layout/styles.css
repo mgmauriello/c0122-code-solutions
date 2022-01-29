@@ -25,6 +25,7 @@ img {
 
 h1 {
   font-size: 3em;
+  font-weight: lighter;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
@@ -32,6 +33,15 @@ h1 {
 p {
   font-size: small;
   color: #4f4f4f;
+  line-height: 20px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: medium;
+  text-transform: full-width;
+  line-height: 15px;
+  padding: 10px;
 }
 
 .justify-content {
