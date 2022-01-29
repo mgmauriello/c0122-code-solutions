@@ -1,0 +1,78 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.heading-font {
+  font-family: "Tiempos Headline", serif;
+  color: #294363;
+}
+
+li {
+  font-family: Avenir, sans-serif;
+  color: #909090;
+  display: inline;
+  margin-right: 40px;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-three-forths {
+  width: 75%;
+}
+
+.column-one-third {
+  width: 33.33%;
+}
+
+.justify-content {
+  justify-content: space-evenly;
+}
+
+nav {
+  height: 30px;
+  font-size: small;
+}
+
+nav ul {
+  margin: 0;
+  padding: 30px 0 5px 30px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ebecef;
+}
+
+button.submit {
+  font-family: Avenir, sans-serif;
+  font-weight: bold;
+  background-color: #294363;
+  color: white;
+  border: none;
+  border-color: #294363;
+  border-radius: 8px;
+  padding: 8px 22px;
+}
+
+button:hover {
+  background-color: darkgray;
+  color: white;
+  border-color: darkgray;
+}
+
+.hero {
+  filter: blur(2px);
+  position: absolute;
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  position: relative;
+}
