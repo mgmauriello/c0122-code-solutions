@@ -73,10 +73,10 @@ button.submit {
   border-style: solid;
 }
 
-.margin-bottom {
-  margin-bottom: 40px;
+.margin-cir {
+  margin-top: 50px;
 }
 
-.margin {
-  margin: 40px;
+.margin-data {
+  margin-top: 20px;
 }
