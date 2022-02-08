@@ -10,9 +10,10 @@
 }
 */
 function ransomCase(string) {
-  var newStr = '';
-  for (var i = 0; i < string.length; i++) {
-    newStr = string.substring(0, i) + string.toUppercase() + string.substring(i + 1);
+  string = string.toLowerCase();
+  var newStr = string.toLowerCase().split('');
+  for (var i = 0; i < newStr.length; i += 2) {
+    newStr = newStr[i].toUpperCase();
   }
-  return newStr;
+  return newStr.join('');
 }
