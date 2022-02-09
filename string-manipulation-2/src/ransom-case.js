@@ -2,18 +2,15 @@
 /*
 -need to make every other char uppercase
 -need to put chars into a new string
--function firstLetterUppercase (input) {
-  for (i=0; i < input.length; i+=2) {
-     input = input.substr(0, i) + input[i].toUpperCase() + input.substr(i + 1);
-  }
-  return input;
-}
+-Increment by 2 for every other char
+- for the string - start it at 1 as first char isnt cap
+-substring returns the part of the string between the start and end indexes
 */
+
 function ransomCase(string) {
   string = string.toLowerCase(0);
-  var newStr = string.toLowerCase().split('');
-  for (var i = 0; i < newStr.length; i += 2) {
-    newStr = newStr[i].toUpperCase();
+  for (var i = 1; i < string.length; i += 2) {
+    string = string.substring(0, i) + string[i].toUpperCase() + string.substring(i + 1);
   }
-  return newStr;
+  return string;
 }
