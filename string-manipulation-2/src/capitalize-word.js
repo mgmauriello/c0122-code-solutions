@@ -8,7 +8,7 @@
 function capitalizeWord(word) {
   word = word.toLowerCase();
   if (word === 'javascript') {
-    return word.charAt(0).toUpperCase() + word.substring(1, 4).toLowerCase() + word.charAt(4).toUpperCase() + word.substring(5).toLowerCase();
+    return 'JavaScript';
   } else {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }
