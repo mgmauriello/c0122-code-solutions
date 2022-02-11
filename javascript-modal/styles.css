@@ -1,9 +1,10 @@
 button {
-  font-size: 2rem;
+  font-size: 20px;
   color: white;
   background-color: blue;
-  padding: 0.5rem 1rem;
+  padding: 11px 25px;
   border-radius: 2px;
+  border: blue;
   position: relative;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  box-shadow: 2px 0 5px black;
 }
