@@ -5,11 +5,11 @@ then that property is not added to the new obj.
 -
 */
 function pick(source, keys) {
-  var newObj = {};
+  var result = {};
   for (var key in source) {
     if (keys.includes(key)) {
-      newObj[key] = source[key];
+      result[key] = source[key];
     }
   }
-  return newObj;
+  return result;
 }
