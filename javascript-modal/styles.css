@@ -54,3 +54,11 @@ body {
   visibility: visible;
   transform: scale(1);
 }
+
+.trigger:hover {
+  background-color: #6767db;
+}
+
+.modal-button:hover {
+  background-color: #e97979;
+}
