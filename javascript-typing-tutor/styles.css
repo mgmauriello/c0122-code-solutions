@@ -4,15 +4,13 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .word-container {
   position: relative;
   top: 300px;
   left: 0;
-}
-
-.word {
   display: inline;
 }
 
@@ -22,11 +20,13 @@ span {
   font-weight: bold;
   justify-content: center;
   text-align: center;
+  white-space: pre;
 }
 
 .active {
-  border-bottom: 4px solid;
   padding: 3px 0;
+  color: black;
+  border-bottom: 3px solid;
 }
 
 .correct {
@@ -35,4 +35,5 @@ span {
 
 .incorrect {
   color: red;
+  border-bottom: 3px solid red;
 }
