@@ -1,0 +1,38 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.word-container {
+  position: relative;
+  top: 300px;
+  left: 0;
+}
+
+.word {
+  display: inline;
+}
+
+span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+}
+
+.active {
+  border-bottom: 4px solid;
+  padding: 3px 0;
+}
+
+.correct {
+  color: chartreuse;
+}
+
+.incorrect {
+  color: red;
+}
