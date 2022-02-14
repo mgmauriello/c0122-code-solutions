@@ -7,13 +7,9 @@ return new var
 object where the object gets assigned to the source and target
 */
 function defaults(target, source) {
-  var newObj = [];
-  for (var key in target) {
-    if (source[key] !== target[key]) {
-      newObj[key] = Object.assign(source, target);
+  for (var key in source) {
+    if (target[key] === undefined) {
+      target[key] = source[key];
     }
   }
-  var modifyTarget = Object.assign(target, source);
-  return modifyTarget;
-
 }
