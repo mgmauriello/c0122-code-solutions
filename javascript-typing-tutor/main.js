@@ -3,19 +3,15 @@ var i = 0;
 
 function typingEvent(event) {
   if (!$spans[i]) {
-    if (i === 0) {
-      $spans[i].className = 'active';
-    }
     return;
   }
 
-  var $currentLetter = document.querySelector('.active');
-
-  if (event.key === $currentLetter.textContent) {
-    $currentLetter.className = 'correct';
-    $currentLetter.nextElementSibling.className = 'active';
+  if (event.key === $spans[i].textContent) {
+    $spans[i].className = 'correct';
+    $spans[i].nextElementSibling.className = 'active';
+    i++;
   } else {
-    $currentLetter.className = 'incorrect active';
+    $spans[i].className = 'incorrect active';
   }
 }
 
