@@ -23,43 +23,71 @@ var players = [
   { name: 'Merry', hand: [], score: 0 },
   { name: 'Pippin', hand: [], score: 0 }
 ];
-// var cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11];
+var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
+var rank = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
 var deck = [];
 
-// function createDeck(value) {
-//   for (var i = 0; i < cards.length; i++) {
-//     var spade = { rank: cards[i], suit: 'spade' };
-//     var club = { rank: cards[i], suit: 'club' };
-//     var heart = { rank: cards[i], suit: 'heart' };
-//     var diamond = { rank: cards[i], suit: 'diamond' };
-//   }
-//   deck.push(spade, club, heart, diamond);
-//   return deck;
-// }
-// var shuffledDeck = _.shuffle(deck);
+function createDeck(value) {
+  var card = {};
 
-function dealHand(player) {
-  for (var j = 0; j < players.length; j++) {
-    players[j].hand.push(deck[0]);
-    deck.shift();
-    players[j].hand.push(deck[0]);
-    deck.shift();
+  for (var s = 0; s < suit.length; s++) {
+    for (var r = 0; r < rank.length; r++) {
+      card.suit = suit[s];
+      card.rank = rank[r];
+      deck.push(card);
+      card = {};
+    }
   }
 }
-dealHand(players[0]);
-dealHand(players[1]);
-dealHand(players[2]);
-dealHand(players[3]);
+createDeck();
 
-// var playerScores = [
-//   players[0].hand[0].rank + players[0].hand[1].rank,
-//   players[1].hand[0].rank + players[1].hand[1].rank,
-//   players[2].hand[0].rank + players[2].hand[1].rank,
-//   players[3].hand[0].rank + players[3].hand[1].rank
-// ];
+var shuffledDeck = _.shuffle(deck);
 
-// for (var k = 0; k < playerScores.length; k++) {
-//   if (playerScores[k] === Math.max(...playerScores)) {
-//     console.log('Player ' + (k + 1) + ' wins with a score of : ' + scoreArray[k]);
-//   }
-// }
+function dealHand(player) {
+  for (var i = 0; i < 2; i++) {
+    player.hand.push(shuffledDeck[i]);
+    shuffledDeck.splice(0, 1);
+  }
+}
+
+function dealToPlayers(deal) {
+  for (var i = 0; i < players.length; i++) {
+    dealHand(players[i]);
+  }
+  return players;
+}
+
+function findScores(toPlayers) {
+  dealToPlayers(players);
+  var totalPoints = 0;
+  for (var p = 0; p < players.length; p++) {
+    for (var c = 0; c < players[p].hand.length; c++) {
+      if (players[p].hand[c].rank === 'Ace') {
+        totalPoints += 11;
+      } else if (players[p].hand[c].rank === 'Queen' || players[p].hand[c].rank === 'Jack' || players[p].hand[c].rank === 'King') {
+        totalPoints += 10;
+      } else {
+        totalPoints += players[p].hand[c].rank;
+      }
+    }
+    players[p].score = totalPoints;
+  }
+  return players;
+}
+
+function winningPlayer(toPlayers) {
+  findScores(toPlayers);
+  var winner = {};
+  winner.name = toPlayers[0].name;
+  winner.score = toPlayers[0].score;
+  for (var i = 1; i < players.length; i++) {
+    if (toPlayers[i].score > winner.score) {
+      winner.name = toPlayers[i].name;
+      winner.score = toPlayers[i].score;
+
+    }
+  }
+  console.log(players);
+  console.log('The winner of the February 2022 Coding Card Championship is ' + winner.name + ' with a total score of ' + winner.score + '! Congratulations ' + winner.name + '!!');
+}
+winningPlayer(players);
