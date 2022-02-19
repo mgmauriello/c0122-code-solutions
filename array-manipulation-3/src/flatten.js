@@ -7,6 +7,7 @@ Test whether a value is an Array with Array.isArray
 -if array at index is an array then we can loop through the array and push
 to newArr
 push other arrays from parameter to newArr
+--nested for loop
 */
 function flatten(array) {
   var newArr = [];
@@ -14,8 +15,8 @@ function flatten(array) {
     if (!Array.isArray(array[i])) {
       newArr.push(array[i]);
     } else {
-      for (var index = 0; index < array[i].length; index++) {
-        newArr.push(array[i][index]);
+      for (var j = 0; j < array[i].length; j++) {
+        newArr.push(array[i][j]);
       }
     }
   }
