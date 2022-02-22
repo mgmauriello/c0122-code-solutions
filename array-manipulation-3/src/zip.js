@@ -14,6 +14,18 @@ second
 */
 function zip(first, second) {
   var zipArr = [];
+  var minLength = Math.min(first.length, second.length);
+  for (var i = 0; i < minLength; i++) {
+    var newArr = [first[i], second[i]];
+    zipArr.push(newArr);
+  }
+  return zipArr;
+}
+
+/*
+OLD SOLUTION ---- use Math.min as per request
+function zip(first, second) {
+  var zipArr = [];
   if (first.length < second.length) {
     for (var i = 0; i < first.length; i++) {
       var arr1 = [];
@@ -29,6 +41,6 @@ function zip(first, second) {
       zipArr.push(arr2);
     }
   }
-
   return zipArr;
 }
+*/
