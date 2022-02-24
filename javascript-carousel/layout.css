@@ -1,0 +1,28 @@
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
