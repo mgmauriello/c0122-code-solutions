@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column-fourth center">
+        <i id="prev-img" class="fas fa-angle-left fa-3x"></i>
+      </div>
+      <div class="column-half center">
+        <div id="gallery" class="row center">
+          <img data-view="bulbasaur" class="img" src="images/001.png">
+          <img data-view="charmander" class="img hidden" src="images/004.png">
+          <img data-view="squirtle" class="img hidden" src="images/007.png">
+          <img data-view="pikachu" class="img hidden" src="images/025.png">
+          <img data-view="jigglypuff" class="img hidden" src="images/039.png">
+        </div>
+        <div id="selection-circle">
+          <i data-view="bulbasaur" class="switch fas fa-circle"></i>
+          <i data-view="charmander" class="switch far fa-circle"></i>
+          <i data-view="squirtle" class="switch far fa-circle"></i>
+          <i data-view="pikachu" class="switch far fa-circle"></i>
+          <i data-view="jigglypuff" class="switch far fa-circle"></i>
+        </div>
+      </div>
+      <div class="column-fourth center">
+        <i id="next-img" class="fas fa-angle-right fa-3x"></i>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
