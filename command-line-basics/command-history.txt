@@ -1,0 +1,43 @@
+    1  exit
+    2  whoami
+    3  git config --global user.name "Michaela Mauriello"
+    4  git config --global user.email "michaela.mauriello@gmail.com"
+    5  git config --global --list
+    6  exit
+    7  cd ~/repos/c0122-code-solutions
+    8  cd command-line-basics
+    9  l
+   10  cat hello.txt
+   11  ls
+   12  cat hello.txt
+   13  man touch
+   14  touch tag-youre-it.txt
+   15  touch snoot/boop.txt
+   16  ls
+   17  ls snoot
+   18  man mkdir
+   19  mkdir parent
+   20  ls
+   21  mkdir -p parent/child/grandchild
+   22  touch -a parent/child/grandchild/.gitkeep
+   23  ls -a
+   24  ls -a parent/child/grandchild/
+   25  man mv
+   26  mv pokiemans pokemon
+   27  ls
+   28  man rm
+   29  rm lol.txt
+   30  rm -r kill-me/
+   31  ls kill-me/
+   32  man cp
+   33  cp and-then.txt
+   34  cp -r and-then.txt
+   35  man cp
+   36  cp no-and-then.txt and-then.txt
+   37  ls
+   38  cp and-then.txt no-and-then.txt
+   39  ls
+   40  cat and-then.txt no-and-then.txt
+   41  man history
+   42  history
+   43  history > command-history.txt
