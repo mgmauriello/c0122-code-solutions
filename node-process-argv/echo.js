@@ -1,1 +1,1 @@
-console.log('I am afraid I cannot do that Dave');
+console.log(process.argv[2]);
