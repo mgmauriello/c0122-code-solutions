@@ -21,8 +21,8 @@ if (process.argv[2] === 'read') {
     if (err) throw (err);
   });
 } else if (process.argv[2] === 'delete') {
-
   delete dataJSON.notes[`${process.argv[3]}`];
+
   fs.writeFile('./data.json', `${JSON.stringify(dataJSON, null, 2)}`, 'utf8', err => {
     if (err) throw (err);
   });
