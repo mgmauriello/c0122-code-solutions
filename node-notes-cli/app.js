@@ -2,12 +2,9 @@ const dataJSON = require('./data.json');
 const fs = require('fs');
 
 if (process.argv[2] === 'read') {
-  fs.readFile('./data.json', 'utf8', err => {
-    if (err) throw (err);
-    for (const id in dataJSON.notes) {
-      console.log(id, dataJSON.notes[id]);
-    }
-  });
+  for (const id in dataJSON.notes) {
+    console.log(id, dataJSON.notes[id]);
+  }
 } else if (process.argv[2] === 'create') {
   dataJSON.notes[dataJSON.nextId++] = process.argv[3];
 
