@@ -9,7 +9,6 @@ app.get('/api/notes', (req, res) => {
     arr.push(dataJSON.notes[key]);
   }
   res.json(arr);
-  res.sendStatus(200);
 });
 
 app.get('/api/notes/:id', (req, res) => {
