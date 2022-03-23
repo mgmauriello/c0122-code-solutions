@@ -1,5 +1,5 @@
 select "title",
        "rentalRate"
   from "films"
-where "rentalRate" = 0.99
+where "rentalRate" < 1
 limit 50;
