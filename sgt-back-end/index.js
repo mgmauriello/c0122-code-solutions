@@ -72,7 +72,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
     });
   } else if (!Number.isInteger(score) || score <= 0) {
     res.status(400).json({
-      error: 'id must be a positive integer'
+      error: 'gradeId must be a positive integer'
     });
   } else {
     const sql = `
@@ -108,7 +108,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   const deleteId = Number(req.params.gradeId);
   if (!Number.isInteger(deleteId) || deleteId <= 0) {
     res.status(400).send({
-      error: 'gradeid must be a positive integer'
+      error: 'gradeId must be a positive integer'
     });
     return;
   }
