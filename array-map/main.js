@@ -25,11 +25,13 @@ console.log('prices', prices);
 const upperCase = language => {
   return language.toUpperCase();
 };
+
 const upperCased = languages.map(upperCase);
 console.log('upperCased', upperCased);
 
 const firstLetter = language => {
   return language[0];
 };
+
 const firstLetters = languages.map(firstLetter);
 console.log('firstLetters', firstLetters);
