@@ -1,0 +1,47 @@
+button {
+  font-size: 2rem;
+  padding: 0;
+  width: 3.8rem;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  background-color: #f0f0f0;
+}
+
+.toggle-on {
+  position: absolute;
+  background-color: rgb(106 168 79);
+  height: 1.8rem;
+  width: 3.8rem;
+  border-radius: 20px;
+  border: 2px solid #e8eae9;
+}
+
+.toggle-off {
+  position: absolute;
+  background-color: #c7c4c4;
+  height: 1.8rem;
+  width: 3.8rem;
+  border-radius: 20px;
+  border: 2px solid #e8eae9;
+}
+
+.circle-on {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: white;
+  left: 2rem;
+  border-radius: 20px;
+  border: 2px solid #e8eae9;
+}
+
+.circle-off {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid #e8eae9;
+}
