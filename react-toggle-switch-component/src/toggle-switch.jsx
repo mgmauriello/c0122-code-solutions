@@ -21,6 +21,7 @@ export default class ToggleSwitch extends React.Component {
         <button>
           <div onClick={this.handleClick} className='toggle-on'></div>
           <div onClick={this.handleClick} className='circle-on'></div>
+          <div className='text'>On</div>
         </button>
       );
     } else {
@@ -28,6 +29,7 @@ export default class ToggleSwitch extends React.Component {
         <button>
           <div onClick={this.handleClick} className='toggle-off'></div>
           <div onClick={this.handleClick} className='circle-off'></div>
+          <div className='text'>Off</div>
         </button>
       );
     }
