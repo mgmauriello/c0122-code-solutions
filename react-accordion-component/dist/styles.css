@@ -1,0 +1,27 @@
+h3,
+p {
+  margin: 0;
+  padding: 10px;
+  color: black;
+}
+
+.tab {
+  background-color: lightgrey;
+  border: solid black 1px;
+  font-size: 1.1rem;
+  text-align: center;
+  word-spacing: 2px;
+}
+
+.content {
+  border: solid black 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+li {
+  width: 60%;
+  list-style-type: none;
+}
