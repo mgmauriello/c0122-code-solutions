@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+form {
+  margin: 40px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+i {
+  position: relative;
+  font-size: 25px;
+  margin-left: 12px;
+  top: 5px;
+}
+
+.success-icon {
+  color: rgb(11 156 11);
+}
+
+.error-icon {
+  color: rgb(211 9 9);
+}
+
+.error-text {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: rgb(211 9 9);
+}
