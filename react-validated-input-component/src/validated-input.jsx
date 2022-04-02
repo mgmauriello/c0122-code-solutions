@@ -5,8 +5,7 @@ class ValidatedInput extends React.Component {
     super(props);
     this.state = {
       password: '',
-      error: '',
-      icon: ''
+      error: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,24 +18,30 @@ class ValidatedInput extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.password === '') {
-      this.setState({ icon: 'fas fa-times error-icon ms-2' });
       this.setState({ error: 'A password is required.' });
     } else if (this.state.password.length < 8) {
-      this.setState({ icon: 'fas fa-times error-icon ms-2' });
       this.setState({ error: 'Your password is too short.' });
     } else {
-      this.setState({ icon: 'fas fa-check success-icon ms-2' });
       this.setState({ error: '' });
     }
   }
 
   render() {
+    let iconErr = '';
+    let iconSuccess = '';
+    if (this.state.value === '' || this.state.password.length < 8) {
+      iconErr = 'fas ms-2 fa-times error-icon';
+    } else {
+      iconSuccess = 'fas ms-2 fa-check success-icon';
+    }
+
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor='password'>Password</label>
         <input id='password' onChange={this.handleChange} type="password" name='password'
           value={this.state.password}></input>
-        <i className={this.state.icon}></i>
+        <i className={`${iconErr}`}></i>
+        <i className={`${iconSuccess}`}></i>
         <p className='error-text'>{this.state.error}</p>
       </form>
     );
