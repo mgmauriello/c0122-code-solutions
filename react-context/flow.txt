@@ -1,0 +1,41 @@
+1. User can sign up.
+- From the auth form, user can click the "Sign In" or "Sign Up" buttons on the navbar
+  which will bring them to the hashed page where they can register.
+- Once username and password are inputted and submitted, a post request is
+  sent to '/api/auth/sign-up'
+- The server receives the request where it will then either throw an error
+  if there is an issue with username and password or continue moving forward
+  with the request.
+- Argon2 creates a hashedPassword and then inserts into the database the
+  username and hashedPassword into users table
+- If it is a 201 successstatus , then the hash router will be updated and user
+  taken to sign in page.
+
+2. User can sign in.
+- From the auth form, user can click the "Sign In" or "Sign Up" buttons on the navbar
+  or can click the anchor button "Sign in instead".
+- Once the username and password is inputted and submitted, the request is called
+  through a post method through the fetch method at '/api/auth/sign-in'
+- The server receives the request and will throw an error if there is an
+  issue with username and password
+- Server runs a sql query for the database to find the row with the matching username
+- Argon2 checks that the hashed password and the password enter match using .verify
+  if it doesn't match, an error will be thrown.
+- If it does match, the payload and token are created and then passed into and
+  calls the handleSignIn method
+- Once handleSignIn runs, it sets the react-context-jwt name as the token in
+  the local storage.
+
+3. User can stay signed in (even if they refresh the page).
+- when user refreshes the page, componentDidMount is called and calls
+  getItem method of localstorage and checks for a token then re-renders the
+  page if the token exists.
+
+
+4. User can sign out.
+- When user clicks sign out button, its prop onClick calls handleSignOut and
+  the token is removed from local storage
+- User property of state is updated with null as its new value removing the react-context-jwt
+- Render is called and then the state, which will be null, is updated and
+  re-renders in the app conponent
+- Then the user is brought back to the sign in page
