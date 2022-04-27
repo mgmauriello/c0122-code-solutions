@@ -7,8 +7,3 @@ function includes(list, value) {
   }
   return false;
 }
-
-// if list contains only one node, return list
-// if list's data === value returntrue
-// go through to the next node in the list
-// return false (until it is true)
