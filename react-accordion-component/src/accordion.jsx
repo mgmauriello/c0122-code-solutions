@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export default function Accordion(props) {
   const [currentView, setView] = useState(null);
@@ -6,11 +6,11 @@ export default function Accordion(props) {
   const handleClick = event => {
     const clickedID = event.target.id;
     if (currentView === clickedID) {
-      setView(null)
+      setView(null);
     } else {
-      setView(clickedID)
+      setView(clickedID);
     }
-  }
+  };
 
   const topics = props.topics;
 
@@ -32,7 +32,7 @@ export default function Accordion(props) {
       <ul>
         {listedTopics}
       </ul>
-    );
+  );
 }
 
 // class Accordion extends React.Component {
