@@ -21,23 +21,43 @@ const jsonMiddleware = express.json();
 
 app.use(jsonMiddleware);
 
-app.get('/api/todos', (req, res) => {
+app.get('/api/todos', async (req, res) => {
   const sql = `
     select *
       from "todos"
      order by "todoId"
   `;
-  db.query(sql)
-    .then(result => {
-      res.json(result.rows);
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
+
+  try {
+    const query = db.query(sql);
+    const result = await query;
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: 'an unexpected error occurred'
     });
+  }
+
 });
+
+// app.get('/api/todos', (req, res) => {
+//   const sql = `
+//     select *
+//       from "todos"
+//      order by "todoId"
+//   `;
+//   db.query(sql)
+//     .then(result => {
+//       res.json(result.rows);
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({
+//         error: 'an unexpected error occurred'
+//       });
+//     });
+// });
 
 app.post('/api/todos', (req, res) => {
   const { task, isCompleted = false } = req.body;
